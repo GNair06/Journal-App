@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Journal-App
-=======
 # MyJournal
 ### Video Demo:  https://youtu.be/5YsJxtRHzIc
 
