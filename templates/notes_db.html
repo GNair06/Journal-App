@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Notes_db
+{% endblock %}
+
+{% block main %}
+
+    <form action="/notes_db" method="post" class="center">
+        <div>
+            <input autocomplete="off" autofocus class="a" name="title" placeholder="Search note by title" type="text">
+        </div>
+        <div>
+            <button class="a button center" type="submit">Search</button>
+        </div>
+    </form>
+    <hr style="border-top: 1px solid pink;">
+
+    <table>
+        <tr>
+            <td style="font-size: 25px; text-align: center;">TITLE</td>
+            <td style="font-size: 25px; text-align: center;">NOTE</td>
+        </tr>
+        {% for row in notes %}
+        <tr>
+            <td style="text-align: center;">{{ row.title }}</td>
+            <td style="text-align: center;">{{ row.note }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Reminders
+{% endblock %}
+
+{% block main %}
+<a style="color: solid pink;" href="/reminder_db">Click here to view your reminders.</a>
+<p style="font-size: 25px; background-color: #FDDBFD; width: 380px; margin-top: 15px;">Never miss an important event again!</p>
+    <form action="/reminder" method="post">
+         <div>
+             <label for="date">Date:</label>
+            <input autocomplete="off" autofocus class="c" id="date" name="date" placeholder="Date" type="date">
+        </div>
+        <textarea name="event" autocomplete="off" rows="13" cols="80" placeholder="Enter event details here"></textarea>
+        <br>
+        <button class="c button" type="submit">Save</button>
+    </form>
+{% endblock %}

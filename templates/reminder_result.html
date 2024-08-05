@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block main %}
+
+    <table>
+        <tr>
+            <td style="font-size: 25px;">DATE</td>
+            <td style="font-size: 25px;">EVENT</td>
+        </tr>
+        {% for row in entry %}
+        <tr>
+            <td>{{ row.date }}</td>
+            <td>{{ row.event }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

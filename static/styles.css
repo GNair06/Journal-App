@@ -1,0 +1,80 @@
+*{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+/*form login*/
+.a{
+    width: 500px;
+    margin-bottom: 12px;
+    height: 50px;
+}
+
+.c
+{
+     width: 300px;
+    margin-bottom: 12px;
+    height: 50px;
+}
+
+.button{
+    background-color: #FDDBFD;
+}
+
+/* journal */
+.dif_date{
+    display:inline-block;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.content{
+    width: 800px;
+    margin-bottom: 20px;
+    height: 500px;
+}
+
+/* birthday */
+.hbd_form{
+    margin-top: 20px;
+}
+
+/* index */
+.home{
+    text-align: center;
+    height: 250px;
+    border-radius: 12px;
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+/* reminder_db */
+.b{
+    width: 441px;
+    margin-bottom: 12px;
+    height: 50px;
+}
+
+hr{
+    margin-bottom: 30px;
+}
+
+table{
+    width: 100%;
+    background-color: #FDDBFD;
+}
+
+tr{
+    margin-bottom: 10px;
+    border: 3px solid white;
+}
+
+

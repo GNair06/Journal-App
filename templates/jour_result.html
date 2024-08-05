@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block main %}
+
+    <table>
+        <tr>
+            <td style="font-size: 25px;">Day</td>
+            <td style="font-size: 25px;">Month</td>
+            <td style="font-size: 25px;">Year</td>
+            <td style="font-size: 25px;">Content</td>
+        </tr>
+        {% for row in entry %}
+        <tr>
+            <td>{{ row.day }}</td>
+            <td>{{ row.month }}</td>
+            <td>{{ row.year }}</td>
+            <td>{{ row.content }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

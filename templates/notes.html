@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Notes
+{% endblock %}
+
+{% block main %}
+<a style="color: solid pink;" href="/notes_db">Click here to view your notes.</a>
+    <form action="/notes" method="post" style="margin-top: 15px;">
+        <div>
+            <input style="width: 660px; text-align: center; font-size: 25px;" autocomplete="off" autofocus class="c" name="title" placeholder="TITLE" type="text">
+        </div>
+        <textarea name="note" autocomplete="off" rows="15" cols="80" placeholder="Enter text here"></textarea>
+        <br>
+        <button class="button c" type="submit">Save</button>
+    </form>
+{% endblock %}

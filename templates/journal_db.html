@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Journal_db
+{% endblock %}
+
+{% block main %}
+
+    <form action="/journal_db" method="post">
+        <div class="dif_date">
+            <input autocomplete="off" autofocus name="day" placeholder="Day" type="number" min="01" max="31">
+        </div>
+        <div class="dif_date">
+            <input autocomplete="off" autofocus name="month" placeholder="Month" type="number" min="01" max="12">
+        </div>
+        <div class="dif_date">
+            <input autocomplete="off" autofocus name="year" placeholder="Year" type="number" min="2021" max="2030">
+        </div>
+        <button class="c button" type="submit">Search</button>
+    </form>
+    <hr style="border-top: 1px solid pink;">
+
+    <div style="overflow-x:auto;">
+    <table>
+        <tr>
+            <td><h5>DAY</h5></td>
+            <td><h5>MONTH</h5></td>
+            <td><h5>YEAR</h5></td>
+            <td><h5>CONTENT</h5></td>
+        </tr>
+        {% for row in journal %}
+        <tr>
+            <td>{{ row.day }}</td>
+            <td>{{ row.month }}</td>
+            <td>{{ row.year }}</td>
+            <td>{{ row.content }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}

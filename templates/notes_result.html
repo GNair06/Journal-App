@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block main %}
+
+    <table>
+        <tr>
+            <td style="font-size: 25px;">TITLE</td>
+            <td style="font-size: 25px;">NOTE</td>
+        </tr>
+        {% for row in entry %}
+        <tr>
+            <td>{{ row.title }}</td>
+            <td>{{ row.note }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block main %}
+
+    <table style="text-align: center;">
+        <tr>
+            <td style="font-size: 25px;">NAME</td>
+            <td style="font-size: 25px;">BIRTHDAY</td>
+        </tr>
+        {% for row in entry %}
+        <tr>
+            <td>{{ row.name }}</td>
+            <td>{{ row.date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

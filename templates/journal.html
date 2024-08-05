@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Diary
+{% endblock %}
+
+{% block main %}
+<p style="margin-bottom: 1px; text-align: justify; color: pink;"><a href="/journal_db">Click here to view your diary entries.</a></p>
+<br>
+    <form action="/journal" method="post">
+        <div class="dif_date">
+            <input autocomplete="off" autofocus name="day" placeholder="Day" type="number" min="01" max="31">
+        </div>
+        <div class="dif_date">
+            <input autocomplete="off" autofocus name="month" placeholder="Month" type="number" min="01" max="12">
+        </div>
+        <div class="dif_date">
+            <input autocomplete="off" autofocus name="year" placeholder="Year" type="number" min="2021" max="2030">
+        </div>
+        <br>
+        <textarea class="content" name="content" autocomplete="off" rows="15" cols="50" placeholder="Share your thoughts with your diary"></textarea>
+        <br>
+        <button class="c button" type="submit">Save</button>
+    </form>
+{% endblock %}

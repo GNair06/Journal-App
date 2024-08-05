@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Reminder_db
+{% endblock %}
+
+{% block main %}
+
+    <p style="font-size: 24px; color: grey;" class="center">Enter date to view reminders set for that day:</p>
+    <form action="/reminder_db" method="post" class="center">
+        <div>
+             <label style="color: grey;" for="date">Date:</label>
+            <input autocomplete="off" autofocus class="b" name="date" placeholder="Date" type="date">
+        </div>
+        <button class="a button" style="color: grey;" type="submit">Search</button>
+    </form>
+    <hr style="border-top: 1px solid pink;">
+
+    <table>
+        <tr>
+            <td style="font-size: 25px;">DATE</td>
+            <td style="font-size: 25px;">EVENT</td>
+        </tr>
+        {% for row in reminder %}
+        <tr>
+            <td>{{ row.date }}</td>
+            <td>{{ row.event }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

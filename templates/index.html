@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+        <div class="center">
+            <button style="background-color: #d7bcd1;" class="home" onclick="document.location='/journal_db'" type="submit">Diary</button>
+            <button style="background-color: #e9a5a5;"class="home" onclick="document.location='/birthdays_db'" type="submit">Birthdays</button>
+            <br>
+            <button style="background-color: #f0c1a3;"class="home" onclick="document.location='/notes_db'" type="submit">Notes</button>
+            <button style="background-color: #d8b2b2;"class="home" onclick="document.location='/reminder_db'" type="submit">Reminder</button>
+        </div>
+
+{% endblock %}

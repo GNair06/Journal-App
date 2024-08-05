@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    birthdays_db
+{% endblock %}
+
+{% block main %}
+
+    <form action="/birthdays_db" method="post" class="center">
+        <div>
+            <input autocomplete="off" autofocus class="c" name="name" placeholder="Name" type="text">
+        </div>
+        <button class="c button" type="submit">Search</button>
+    </form>
+    <hr style="border-top: 1px solid pink;">
+
+    <table style="text-align: center;">
+        <tr>
+            <td style="font-size: 25px;">NAME</td>
+            <td style="font-size: 25px;">BIRTHDAY</td>
+        </tr>
+        {% for row in birthdays %}
+        <tr>
+            <td>{{ row.name }}</td>
+            <td>{{ row.date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
